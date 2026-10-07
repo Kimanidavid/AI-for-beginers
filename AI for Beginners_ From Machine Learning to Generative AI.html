@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI for Beginners: From Machine Learning to Generative AI</title>
+<style>
+:root{--bg:#eef1f6;--ink:#14213d;--mute:#53607a;--acc:#0b7285;--deep:#b4690e;--card:#fff;--line:#d3d9e4;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1624;--ink:#e8edf7;--mute:#9aa7c0;--acc:#5cc3d6;--deep:#f0b45a;--card:#182235;--line:#2a3750}}
+:root[data-theme="dark"]{--bg:#0f1624;--ink:#e8edf7;--mute:#9aa7c0;--acc:#5cc3d6;--deep:#f0b45a;--card:#182235;--line:#2a3750}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif}
+main{max-width:820px;margin:0 auto;padding:28px 18px 60px}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.2}
+h1{font-size:clamp(30px,6vw,46px);margin:0 0 10px}
+h2{font-size:26px;margin:40px 0 6px}
+.lead{font-size:18px;color:var(--mute);margin:0 0 18px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+.facts span{border:1px solid var(--line);background:var(--card);padding:4px 12px;border-radius:99px;font-size:14px}
+.nest{display:flex;justify-content:center;margin:16px 0}
+.nest div{border:2px solid var(--acc);border-radius:14px;padding:8px 10px;font-size:13px;font-weight:600;background:color-mix(in srgb,var(--acc) 8%,transparent)}
+.nest div div{margin-top:6px;border-color:var(--ink)}
+.nest div div div{border-color:var(--deep)}
+.nest div div div div{border-style:dashed;background:var(--card)}
+details{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:6px;margin:12px 0}
+details.dd{border-left-color:var(--deep)}
+summary{cursor:pointer;padding:14px 16px;font-weight:700;list-style:none;display:flex;gap:10px;justify-content:space-between;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:3px solid var(--acc);outline-offset:-3px}
+summary small{font-weight:400;color:var(--mute);white-space:nowrap}
+.body{padding:0 16px 14px}
+.body h3{font-size:16px;font-family:system-ui,sans-serif;margin:14px 0 4px;color:var(--acc)}
+.dd .body h3{color:var(--deep)}
+.body ul{margin:0;padding-left:20px}
+.body p{margin:4px 0}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;font-size:14px;min-width:420px}
+td,th{border:1px solid var(--line);padding:5px 10px;text-align:left}
+code{background:color-mix(in srgb,var(--ink) 9%,transparent);padding:1px 5px;border-radius:3px;font-size:14px}
+</style></head><body><main>
+
+<h1>AI for Beginners: From Machine Learning to Generative AI</h1>
+<p class="lead">A self-paced course for people with no technical background. Start with where AI comes from, then go deep on how generative AI works and how to use it well.</p>
+<div class="facts"><span>Level: beginner</span><span>No coding required</span><span>About 8 to 10 hours</span><span>12 modules and a capstone</span></div>
+
+<h2>Course plan</h2>
+<ul>
+<li><b>Week 1, Foundations (modules 1 to 4):</b> the AI landscape, machine learning types, deep learning, and spotting generative AI.</li>
+<li><b>Week 2, Generative AI core (modules 5 to 9):</b> definition, transformers, model types, code generation, Google Cloud tools.</li>
+<li><b>Week 3, Deep dive (modules 10 to 12) and capstone:</b> inside an LLM, prompting and grounding, evaluation and responsible use.</li>
+</ul>
+<p>Each module has key ideas, an example, and a task. Open a module to read it.</p>
+
+<h2>Part 1: Foundations</h2>
+
+<details open><summary>1. Where generative AI fits in the AI and ML landscape <small>~30 min</small></summary><div class="body">
+<div class="nest"><div>Artificial intelligence<div>Machine learning<div>Deep learning<div>Generative AI</div></div></div></div></div>
+<h3>Key ideas</h3><ul>
+<li><b>AI:</b> software that performs tasks that normally need human intelligence.</li>
+<li><b>Machine learning (ML):</b> a branch of AI where systems learn patterns from data instead of following hand-written rules.</li>
+<li><b>Deep learning:</b> ML using neural networks with many layers.</li>
+<li><b>Generative AI:</b> deep learning models that create new content such as text, images, audio and code.</li>
+</ul>
+<h3>Example</h3><p>A spam filter learns from labeled emails (ML). An assistant that drafts a reply to an email creates new text (generative AI).</p>
+<h3>Task</h3><p>List five apps you use. Place each on the nested diagram and justify your choice in one sentence.</p>
+</div></details>
+
+<details><summary>2. Supervised and unsupervised ML models <small>~40 min</small></summary><div class="body">
+<h3>Key ideas</h3><ul>
+<li><b>Supervised learning:</b> training data has labels (the right answers). The model learns to predict them. <i>Classification</i> predicts a category; <i>regression</i> predicts a number.</li>
+<li><b>Unsupervised learning:</b> no labels. The model finds structure, such as <i>clusters</i> of similar customers or unusual data points.</li>
+<li><b>Self-supervised learning:</b> the labels come from the data itself, for example hiding a word and predicting it. This is how large language models are pretrained.</li>
+</ul>
+<h3>Example</h3><p>Predicting house prices from size and location is supervised regression. Grouping shoppers by buying habits is unsupervised clustering.</p>
+<h3>Task</h3><p>Label each as supervised or unsupervised: (a) detecting fraud from past fraud cases, (b) grouping news articles by topic with no tags, (c) predicting tomorrow's sales.</p>
+</div></details>
+
+<details><summary>3. Generative AI as a subset of deep learning <small>~40 min</small></summary><div class="body">
+<h3>Key ideas</h3><ul>
+<li>A <b>neural network</b> is layers of simple units with adjustable <b>weights</b>. Training nudges the weights to reduce an error (the <b>loss</b>).</li>
+<li>Deep networks learn useful features by themselves, so you do not hand-design them.</li>
+<li><b>Discriminative models</b> tell things apart ("cat or dog?"). <b>Generative models</b> learn what the data looks like and can produce new examples.</li>
+</ul>
+<h3>Example</h3><p>An image classifier outputs the label "cat". A generative image model outputs a new picture of a cat that never existed.</p>
+<h3>Task</h3><p>In your own words, explain the difference between recognizing a cat and creating a cat. Aim for three sentences.</p>
+</div></details>
+
+<details><summary>4. Is it generative AI or not? <small>~40 min</small></summary><div class="body">
+<h3>Quick test</h3><p>Does the system produce <b>new content</b> (text, image, audio, video, code)? Or does it output a label, score, number or ranking?</p>
+<div class="tw"><table><tr><th>System</th><th>Generative?</th><th>Why</th></tr>
+<tr><td>Spam detector</td><td>No</td><td>Outputs a label</td></tr>
+<tr><td>House price predictor</td><td>No</td><td>Outputs a number</td></tr>
+<tr><td>Product recommender</td><td>No</td><td>Outputs a ranking</td></tr>
+<tr><td>Sentiment analysis</td><td>No</td><td>Outputs a category</td></tr>
+<tr><td>Chatbot that writes answers</td><td>Yes</td><td>Creates text</td></tr>
+<tr><td>Text-to-image tool</td><td>Yes</td><td>Creates images</td></tr>
+<tr><td>Summarizer or translator</td><td>Yes</td><td>Creates new text</td></tr></table></div>
+<h3>Task</h3><p>Classify ten AI features from your phone using the quick test. Note any that are hard to place and why.</p>
+</div></details>
+
+<h2>Part 2: Generative AI core</h2>
+
+<details><summary>5. Defining generative AI: a formal approach <small>~40 min</small></summary><div class="body">
+<h3>Definition</h3><p>Generative AI is a type of AI that creates new content based on what it learned from existing content. Training teaches the model the patterns in its data; at use time, a <b>prompt</b> goes in and new content comes out.</p>
+<h3>Key ideas</h3><ul>
+<li><b>Foundation model:</b> a large model trained on broad data, then adapted to many tasks.</li>
+<li><b>Parameters:</b> the learned weights. More parameters usually means more capacity, and more cost.</li>
+<li>Output is <b>sampled</b> from probabilities, so the same prompt can give different answers.</li>
+<li>The model learns patterns, not verified facts. It does not look things up unless connected to a tool.</li>
+</ul>
+<h3>Task</h3><p>Write a 50-word definition of generative AI for a friend, using the words <i>training</i>, <i>prompt</i> and <i>new content</i>.</p>
+</div></details>
+
+<details><summary>6. Transformers, hallucinations, and prompts <small>~50 min</small></summary><div class="body">
+<h3>Transformers</h3><p>The architecture behind most modern generative AI. Its key mechanism, <b>attention</b>, lets the model weigh how much each word in the input matters to every other word. This captures context, for example what "it" refers to in a sentence.</p>
+<h3>Hallucinations</h3><p>Output that is fluent but false or unsupported. Common causes: gaps or noise in training data, no grounding in real sources, missing context in the prompt, and the fact that generation is probabilistic.</p>
+<h3>Prompts</h3><p>The input that steers the model. <b>Prompt design</b> is crafting it so the output is useful.</p>
+<h3>Task</h3><p>Ask any chatbot a question about a small, obscure topic you know well. Mark every claim as correct, wrong or unverifiable.</p>
+</div></details>
+
+<details><summary>7. Overview of generative AI model types <small>~40 min</small></summary><div class="body">
+<div class="tw"><table><tr><th>Type</th><th>Input to output</th><th>Example use</th></tr>
+<tr><td>Text to text</td><td>Words to words</td><td>Chat, summaries, translation</td></tr>
+<tr><td>Text to image</td><td>Words to pictures</td><td>Design, illustration</td></tr>
+<tr><td>Text to video / 3D</td><td>Words to motion or models</td><td>Ads, prototypes</td></tr>
+<tr><td>Image to text</td><td>Pictures to words</td><td>Captions, document reading</td></tr>
+<tr><td>Text to task</td><td>Words to actions</td><td>Agents that use software tools</td></tr>
+<tr><td>Multimodal</td><td>Mixed inputs and outputs</td><td>Analyze a chart and explain it</td></tr></table></div>
+<h3>Key ideas</h3><ul><li>Common techniques: <b>transformers</b> (text), <b>diffusion</b> (images: start from noise and refine), <b>GANs</b> and <b>VAEs</b> (earlier image generators).</li></ul>
+<h3>Task</h3><p>Pick one model type and describe a real problem in your work or studies it could help with.</p>
+</div></details>
+
+<details><summary>8. Generative AI for code generation <small>~30 min</small></summary><div class="body">
+<h3>What it can do</h3><ul><li>Complete code as you type, or write a function from a plain-English comment.</li><li>Explain unfamiliar code, find bugs, write tests and documentation.</li><li>Translate code between languages.</li></ul>
+<h3>Limits</h3><ul><li>It can produce code that looks right but fails or is insecure. Always run and review it.</li><li>Check licensing rules and never paste secrets or private code into untrusted tools.</li></ul>
+<h3>Task</h3><p>Prompt: <code>Write a Python function that counts how many times each word appears in a text. Explain each line.</code> Then ask the model to write three tests and run them.</p>
+</div></details>
+
+<details><summary>9. Leveraging Google Cloud for enhanced generative AI <small>~30 min</small></summary><div class="body">
+<p>Product names change, so confirm current names in Google Cloud's documentation. At the time of writing, the main pieces are:</p>
+<ul>
+<li><b>Gemini:</b> Google's multimodal model family.</li>
+<li><b>Vertex AI:</b> the platform for building, tuning and deploying models.</li>
+<li><b>Model Garden:</b> a catalog of Google and third-party models.</li>
+<li><b>Vertex AI Studio:</b> a no-code space to test prompts and tune models.</li>
+<li><b>Search and agent-building tools:</b> connect models to your own documents and data.</li>
+<li><b>Gemini Code Assist:</b> AI help inside code editors.</li>
+</ul>
+<h3>Task</h3><p>Use a free tier or trial to test one prompt in a model studio. Change the temperature setting and compare three outputs.</p>
+</div></details>
+
+<h2>Part 3: Generative AI deep dive</h2>
+
+<details class="dd"><summary>10. Inside a large language model <small>~60 min</small></summary><div class="body">
+<h3>The pipeline</h3><ul>
+<li><b>Tokenization:</b> text is split into tokens (words or word pieces).</li>
+<li><b>Embeddings:</b> each token becomes a list of numbers that captures meaning, so similar words sit close together.</li>
+<li><b>Transformer layers:</b> attention blends context into every token.</li>
+<li><b>Next-token prediction:</b> the model scores every possible next token, picks one, appends it, and repeats.</li>
+</ul>
+<h3>Controls</h3><ul>
+<li><b>Temperature:</b> low is predictable, high is varied and riskier.</li>
+<li><b>Top-p / top-k:</b> limit which candidates can be picked.</li>
+<li><b>Context window:</b> how much text the model can consider at once.</li>
+</ul>
+<h3>How models are trained</h3><ul>
+<li><b>Pretraining:</b> self-supervised learning on huge text collections.</li>
+<li><b>Instruction tuning:</b> examples of good answers teach it to follow requests.</li>
+<li><b>Preference tuning (such as RLHF):</b> human ratings steer it toward helpful, safer answers.</li>
+</ul>
+<h3>Task</h3><p>Run one prompt five times at low and at high temperature. Write what changed.</p>
+</div></details>
+
+<details class="dd"><summary>11. Prompting and grounding <small>~60 min</small></summary><div class="body">
+<h3>Anatomy of a strong prompt</h3><p><b>Role</b>, <b>task</b>, <b>context</b>, <b>constraints</b>, <b>output format</b>, and optionally <b>examples</b>.</p>
+<h3>Before and after</h3>
+<p><i>Weak:</i> "Tell me about solar power."</p>
+<p><i>Strong:</i> "You are a science teacher. Explain how solar panels work to a 14-year-old in under 150 words, with one everyday analogy and three bullet-point takeaways."</p>
+<h3>Techniques</h3><ul>
+<li><b>Zero-shot:</b> just ask. <b>Few-shot:</b> include examples of the style you want.</li>
+<li><b>Chain-of-thought:</b> ask for step-by-step reasoning on multi-step problems.</li>
+<li><b>Iterate:</b> refine the prompt based on what the output got wrong.</li>
+</ul>
+<h3>Grounding</h3><p><b>Retrieval-augmented generation (RAG)</b> fetches relevant passages from trusted documents and gives them to the model, so answers rest on real sources. Ask for citations and tell the model to say "not found" when the sources lack the answer.</p>
+<h3>Task</h3><p>Take one weak prompt and improve it three times. Keep all versions and note what each change fixed.</p>
+</div></details>
+
+<details class="dd"><summary>12. Evaluation, risks and responsible use <small>~60 min</small></summary><div class="body">
+<h3>Main risks</h3><ul>
+<li><b>Hallucination:</b> confident errors.</li>
+<li><b>Bias:</b> models reflect patterns, including unfair ones, in their data.</li>
+<li><b>Privacy:</b> do not enter personal or confidential data into tools you do not trust.</li>
+<li><b>Copyright and licensing:</b> check the terms for training data and outputs.</li>
+<li><b>Security:</b> prompt injection, where hidden instructions in a document or page hijack the model.</li>
+</ul>
+<h3>Evaluating output</h3><ul>
+<li>Check facts against primary sources.</li>
+<li>Test on a fixed set of examples, including tricky ones.</li>
+<li>Measure groundedness: is every claim supported by the sources provided?</li>
+<li>Keep a human in the loop for anything high-stakes.</li>
+</ul>
+<h3>Task</h3><p>Write a one-page personal policy: what you will use generative AI for, what you will never put into it, and how you will check its work.</p>
+</div></details>
+
+<h2>Capstone project</h2>
+<p>Choose one small real workflow, such as summarizing study notes, drafting customer replies, or explaining code.</p>
+<ul>
+<li>Design a prompt template using the six-part anatomy.</li>
+<li>Test it on 10 varied inputs and record each result.</li>
+<li>Log every hallucination, bias or formatting failure, and how you fixed it.</li>
+<li>Submit the final prompt, the test log, and a one-page reflection on where AI helped and where it did not.</li>
+</ul>
+<h2>Check your understanding</h2>
+<ul>
+<li>Why is a spam filter not generative AI?</li>
+<li>What does attention let a transformer do?</li>
+<li>Give two reasons a model might hallucinate, and two ways to reduce it.</li>
+<li>How does RAG differ from a plain prompt?</li>
+</ul>
+</main></body></html>
